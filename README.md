@@ -4,4 +4,4 @@ coding class website
 
 
 
-https://obamacarez.github.io/nabhraj-coding-ellis-2019/.
+https://obamacarez.github.io/nabhraj-coding-ellis-2019/public/
