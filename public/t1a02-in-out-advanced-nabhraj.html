@@ -1,0 +1,57 @@
+<input type=text id= "myText01" value="3"><br>
+
+<input type=button value=clickme onClick="{
+
+   let myTemp = document.getElementById ('myText01').value
+   document.getElementById('myDiv01').innerHTML = myTemp
+
+}">
+
+<div id="myDiv01">...</div>
+
+<input type=text id= "myText02" value="hello"><br>
+
+<input type=button value=pressme onClick="{
+
+   let myTemp = document.getElementById ('myText02').value
+   document.getElementById('myDiv02').innerHTML = myTemp
+
+}">
+
+<div id="myDiv02">...</div>
+
+<input type=text id="myName01" value="fred"><br>
+<input type=text id="myAge01" value="16"><br>
+
+<input type=button value=run onClick="{
+    let myAge = Math.abs(document.getElementById('myAge01').value)
+    let myTemp = 'you are a teenger'
+    if (myAge <= 12){myTemp = 'You are a child'}
+    if (myAge >= 20 && myAge <=65 ){myTemp = 'You are an adult '}
+    if (myAge >= 65){ myTemp = 'you can retire'}
+
+    //     ||=OR   && = AND   ! = NOT
+
+
+    document.getElementById('myDiv03').innerHTML = myTemp
+}">
+<div id="myDiv03">...</div>
+
+<input type=text id="myName01" value="fred"><br>
+<input type=text id="myAge01" value="16"><br>
+
+<input type=button value=tap onClick="{
+    let myAge = Math.abs(document.getElementById('myAge01').value)
+    let myTemp = 'you are a teenger'
+    if (myAge <= 12){myTemp = 'You are a child'}
+    if (myAge >= 20 && myAge <=65 ){myTemp = 'You are an adult '}
+    if (myAge >= 65){ myTemp = 'you can retire'}
+
+    //     ||=OR   && = AND   ! = NOT
+
+
+    document.getElementById('myDiv04').innerHTML = myTemp
+}">
+<div id="myDiv04">...</div>
+
+
