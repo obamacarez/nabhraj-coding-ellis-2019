@@ -1,0 +1,51 @@
+<input type=text id="myText01" value="5"><br>
+
+<input type=button value="loop" onclick="{
+
+let myTemp = document.getElementById('myText01').value
+let mySum = ' '
+document.getElementById('myDiv01').innerHTML = ' '
+
+for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+    mySum += 'Loop #:  '+myLoop+'<br>'
+}
+document.getElementById('myDiv01').innerHTML = mySum
+}">
+
+<div id="myDiv01">...</div>
+
+
+<input type=text id="myText02" value="12"><br>
+
+<input type=button value="loop" onclick="{
+
+let myTemp = document.getElementById('myText02').value
+let mySum = ' '
+document.getElementById('myDiv02').innerHTML = ' '
+
+for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+    mySum += 'Loop #:  '+myLoop+'<br>'
+}
+document.getElementById('myDiv02').innerHTML = mySum
+}">
+
+<div id="myDiv02">...</div>
+
+
+
+
+<input type=text id="myText03" value="23"><br>
+
+<input type=button value="loop" onclick="{
+
+let myTemp = document.getElementById('myText03').value
+let mySum = ' '
+document.getElementById('myDiv03').innerHTML = ' '
+
+for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+    mySum += 'Loop #:  '+myLoop+'<br>'
+}
+document.getElementById('myDiv03').innerHTML = mySum
+}">
+
+<div id="myDiv03">...</div>
