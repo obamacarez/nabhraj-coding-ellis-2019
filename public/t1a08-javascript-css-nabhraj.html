@@ -12,7 +12,7 @@
 
 <option value="groove">groove
 <option value="dotted">dotted
-<option value="...">...
+<option value="ridge">ridge
 </select>
 
 <span id="myDiv01" style="border-style:groove; border-width:4; 
@@ -20,4 +20,29 @@ border-color:red" >
 This is a box</spam>
 
 
+
+
+
+
+
+
+
+<input type=button value="change" onClick="{ 
+    document.getElementById('myB01').style.color = 'blue'
+}">
+<b id="myB01"  style="color:red"> hi this is cool</b><br><br>
+
+<select id="myText02" size=1 onChange="{
+   let myTemp = document.getElementById ('myText02').value
+   document.getElementById('myDiv02').style.borderStyle = myTemp
+}">
+
+<option value="groove">groove
+<option value="dotted">dotted
+<option value="ridge">ridge
+</select>
+
+<span id="myDiv02" style="border-style:groove; border-width:4; 
+border-color:red" >
+This is a box</spam>
 
