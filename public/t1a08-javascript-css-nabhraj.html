@@ -1,48 +1,65 @@
+
 <h1>t1a08-javascript-css-nabhraj.html<h1>
 
-<input type=button value="change" onClick="{ 
-    document.getElementById('myB01').style.color = 'blue'
+<input type=button value="change" style="background-color:black; color:white; " onClick="{ 
+    document.getElementById('myB01').style.color = 'violet'
 }">
-<b id="myB01"  style="color:red"> hi this is cool</b><br><br>
+<b id="myB01"  style="color:white"> hi this is cool</b><br><br>
+
+<input type=button value="change" style="background-color:orange; color:pink; " onClick="{ 
+    document.getElementById('myB02').style.color = 'cyan'
+}">
+<b id="myB02"  style="color:black"> hi this is nifty</b><br><br>
 
 <select id="myText01" size=1 onChange="{
-   let myTemp = document.getElementById ('myText01').value
+   let myTemp = document.getElementById ('myText01').value 
    document.getElementById('myDiv01').style.borderStyle = myTemp
 }">
 
 <option value="groove">groove
 <option value="dotted">dotted
 <option value="ridge">ridge
+<option value="outset">outset
+<option value="solid">solid
+<option value="double">double
+<option value="dashed">dashed
+<option value="inset">inset
+<option value="none">none
 </select>
 
-<span id="myDiv01" style="border-style:groove; border-width:4; 
-border-color:red" >
-This is a box</spam>
+
+<span id="myDiv01" style="border-style:groove; border-width:5; 
+border-color:pink" >
+This is a box</span><br><br>
 
 
-
-
-
-
-
-
-
-<input type=button value="change" onClick="{ 
-    document.getElementById('myB01').style.color = 'blue'
-}">
-<b id="myB01"  style="color:red"> hi this is cool</b><br><br>
 
 <select id="myText02" size=1 onChange="{
    let myTemp = document.getElementById ('myText02').value
-   document.getElementById('myDiv02').style.borderStyle = myTemp
+   document.getElementById('myDiv02').style.color = myTemp
 }">
 
-<option value="groove">groove
-<option value="dotted">dotted
-<option value="ridge">ridge
+<option value="red">red
+<option value="blue">blue
+<option value="green">green
+<option value="orange">orange
+<option value="yellow">yellow
+<option value="indigo">indigo
+<option value="violet">violet
+<option value="black">black
+<option value="brown">brown
+<option value="white">white
+
 </select>
+<span id="myDiv02" style="color:red" >
+This is a colour</span>
 
-<span id="myDiv02" style="border-style:groove; border-width:4; 
-border-color:red" >
-This is a box</spam>
+<style>
+body {
+  background-color: darkgreen;
+}
 
+h1 {
+  color: indigo;
+}
+</style>
