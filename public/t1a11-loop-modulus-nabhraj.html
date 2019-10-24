@@ -1,28 +1,68 @@
 <h1 align=center>t1a11-loop-modulus by nabhraj</h1>
 
 enter any number of loops <input type=text id="myText01" 
-value="25"><br><br>
+value="80"><br><br>
 
 <input type=button value="modulus Decisions" onclick="{
+
+
 
 let myLoopMax = document.getElementById('myText01').value
 let myTemp =''
 let myFontColour
 
-for (let myLoop=0;  myLoop <= myLoopMax; myLoop++){
+for (let myLoop=1;  myLoop <= myLoopMax; myLoop++){
 myFontColour = 'black'
 let myMessage = ' '
 
 if (myLoop % 5 == 0) {
-   myFontColour = 'green'
+   myFontColour = 'purple'
    myMessage += ' Divisible by 5 '
 }
+
+if (myLoop % 10 == 0) {
+   myFontColour = 'indigo'
+   myMessage += ' Divisible by 10 '
+}
+
+if (myLoop == 37) {
+   myFontColour = 'cyan'
+   myMessage += ' my favrite number '
+}
+
+if (myLoop % 7 == 0) {
+   myFontColour = 'blue'
+   myMessage += ' multiple of 7 '
+} 
+
+if (myLoop % 13 == 0) {
+   myFontColour = 'brown'
+   myMessage += ' multiple of 13 '
+} 
+
+if (myLoop % 2 == 0) {
+   myFontColour = 'red'
+   myMessage += ' even '
+} 
+
+if (myLoop % 3 == 0) {
+   myFontColour = 'green'
+   myMessage += ' multiple of 3 '
+} 
+
+if (myLoop == 71) {
+   myFontColour = 'pink'
+   myMessage += ' age of my grandfather '
+}
+
 
       myTemp += '<font color='+myFontColour+'> loop # ' + myLoop + 
 '</font>'+ myMessage +'<br>'
    }
 
+
 document.getElementById('myDiv01').innerHTML = myTemp
 }"><br><br>
+
 
 <div id="myDiv01">...</div>
