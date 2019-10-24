@@ -24,7 +24,7 @@ function myHitOther(my1,my2){
 <img id="myImg01"<img src="https://cdn.mos.cms.futurecdn.net/tMnjLRtEm47ueTPt9Rkyxd-320-80.jpg" style="position:absolute; left:200; top:200; width:100; height:100; " />
 <img id="myImg02"<img src="https://themodernproper.com/assets/imager/assets/img/posts/2019/15781/six-minute-egg-5_ba740feb132926901f5efa7bc2de7ad0.jpg" style="position:absolute; left:400; top:200; width:100; height:100; " />
 
-
+<h1> move ostrich </h1>
 <input type=button value="go Right"  onclick="{
    document.getElementById('myImg01').style.left = 
       parseInt(document.getElementById('myImg01').style.left) + 10
@@ -32,4 +32,97 @@ function myHitOther(my1,my2){
        alert('you lose')
       //document.getElementById('myImg01').style.left = '20px'
    }
+
+
+
 }">
+
+<input type=button value="go Left"  onclick="{
+   document.getElementById('myImg01').style.left = 
+      parseInt(document.getElementById('myImg01').style.left) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+
+
+
+}">
+
+<input type=button value="go up"  onclick="{
+   document.getElementById('myImg01').style.top = 
+      parseInt(document.getElementById('myImg01').style.top) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')
+      //document.getElementById('myImg01').style.top = '20px'
+   }
+
+
+
+}">
+
+<input type=button value="go down"  onclick="{
+   document.getElementById('myImg01').style.top = 
+      parseInt(document.getElementById('myImg01').style.top) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')
+      //document.getElementById('myImg01').style.top = '20px'
+   }
+
+
+
+}"><br><br><br><br><br><br><br><br>
+
+
+
+<h1> move egg</h1>
+<input type=button value="go Right"  onclick="{
+   document.getElementById('myImg02').style.left = 
+      parseInt(document.getElementById('myImg02').style.left) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+
+
+
+}">
+
+<input type=button value="go Left"  onclick="{
+   document.getElementById('myImg02').style.left = 
+      parseInt(document.getElementById('myImg02').style.left) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+
+
+
+}">
+
+<input type=button value="go up"  onclick="{
+   document.getElementById('myImg02').style.top = 
+      parseInt(document.getElementById('myImg02').style.top) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')
+      //document.getElementById('myImg01').style.top = '20px'
+   }
+
+
+
+}">
+
+<input type=button value="go down"  onclick="{
+   document.getElementById('myImg02').style.top = 
+      parseInt(document.getElementById('myImg02').style.top) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')
+      //document.getElementById('myImg01').style.top = '20px'
+   }
+
+
+
+}">
+
+
+</script>
