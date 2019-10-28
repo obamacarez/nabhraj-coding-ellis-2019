@@ -7,16 +7,21 @@ document.getElementById('myDiv01').style.left = '397px'
  
    }
 }
-
+function myIsOnScreen(){
+if (parseInt(document.getElementById('myDiv02').style.left) > 400) {
+document.getElementById('myDiv02').style.left = '397px'
+ 
+   }
+}
 
 </script>
 
 <body onkeydown="{
 
       let myKey = event.key
-//    let myKey = string.toLowerCase(event.key)
 
-if (myKey == 'd') {
+
+if(myKey == 'd') {
 
   clearInterval(myInterval)
  myInterval = setInterval(function(){
@@ -29,16 +34,145 @@ if (myKey == 'd') {
  }
 
 
+if(myKey == 'a') {
+
+  clearInterval(myInterval)
+ myInterval = setInterval(function(){
+
+         document.getElementById('myDiv01').style.left = 
+           parseInt(document.getElementById('myDiv01').style.left) - 3
+  myIsOnScreen()
+           } ,20)
+
+ }
+
+if(myKey == 'w') {
+
+  clearInterval(myInterval)
+ myInterval = setInterval(function(){
+
+         document.getElementById('myDiv01').style.top = 
+           parseInt(document.getElementById('myDiv01').style.top) - 3
+  myIsOnScreen()
+           } ,20)
+
+ }
+
+if(myKey == 's') {
+
+  clearInterval(myInterval)
+ myInterval = setInterval(function(){
+
+         document.getElementById('myDiv01').style.top = 
+           parseInt(document.getElementById('myDiv01').style.top) + 3
+  myIsOnScreen()
+           } ,20)
+
+ }
+
+
+if(myKey == 'l') {
+
+  clearInterval(myInterval)
+ myInterval = setInterval(function(){
+
+         document.getElementById('myDiv02').style.left = 
+           parseInt(document.getElementById('myDiv02').style.left) + 3
+  myIsOnScreen()
+           } ,20)
+
+ }
+
+if(myKey == 'j') {
+
+  clearInterval(myInterval)
+ myInterval = setInterval(function(){
+
+         document.getElementById('myDiv02').style.left = 
+           parseInt(document.getElementById('myDiv02').style.left) - 3
+  myIsOnScreen()
+           } ,20)
+
+ }
+
+
+
+
+if(myKey == 'i') {
+
+  clearInterval(myInterval)
+ myInterval = setInterval(function(){
+
+         document.getElementById('myDiv02').style.top = 
+           parseInt(document.getElementById('myDiv02').style.top) - 3
+  myIsOnScreen()
+           } ,20)
+
+ }
+
+if(myKey == 'k') {
+
+  clearInterval(myInterval)
+ myInterval = setInterval(function(){
+
+         document.getElementById('myDiv02').style.top = 
+           parseInt(document.getElementById('myDiv02').style.top) + 3
+  myIsOnScreen()
+           } ,20)
+
+ }
+
 
 }">
 
 <h1 align=center>t1a13-onkeydown-nabhraj</h1>
 
-Get wasd working, what about a second object controled by arrow or IJKL<br>
 
-<div id="myDiv01" style="position:absolute; left:200; top:200; " >nabhraj</div
+<p>use wasd to move nabhraj. use ijkl to move terry.</p><br>
 
+<div id="myDiv01" style="position:absolute; left:200; top:200; " >nabhraj</div>
+<div id="myDiv02" style="position:absolute; left:300; top:200; " >terry</div>
+
+<style>
+body {
+  background-color: cyan;
+}
+
+
+</style>
 </body>
+<style>
+
+body {
+     color: red
+
+     }
+
+
+
+h1   {
+      color: #00ff00;
+     }
+
+
+
+p.ex {
+       color: rgb(255,0,0);
+}
+
+
+
+
+
+
+
+
+
+h1 {
+  border: 5px solid indigo;
+}
+
+</style>
 
 
 
