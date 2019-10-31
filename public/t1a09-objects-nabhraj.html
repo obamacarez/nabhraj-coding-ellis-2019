@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <h1 align=center> tla09-objects by Nabhraj<br>
 
 Objects, decisions, decimals by Nabhraj</h1>
@@ -14,7 +8,7 @@ advanced: input the body temp into the object<br>
 Body Temp: <input type=text id="myText01" value="36.1">degrees Celcius<br>
 
 <input type=button value="input/Output" onclick="{
-let myPerson = { 'age' : '22' , 'name' : Nabhraj'};
+let myPerson = { 'age':'22', 'name':'Nabhraj'};
 
 let myTemp = document.getElementById('myText01').value
 
@@ -23,6 +17,14 @@ let myPrintout = 'myPerson object :' + JSON.stringify(myPerson, null, 3)
 let myIf = 'cool'
 if ( parseInt(myPerson.age) >= 20) {myIf = 'You are a adult' }
 
+    if ( parseInt(myTemp) == 36 | 37) {myIf = 'You are healthy'}
+    else {myIf = 'Body temperature is low'}
+        if ( parseInt(myTemp) >= 38) {myIf = 'You are sick'}
+
+
+
+
+
 document.getElementById('myDiv01').innerHTML = myIf
 document.getElementById('myTextArea01').value = myPrintout
 
@@ -30,5 +32,11 @@ document.getElementById('myTextArea01').value = myPrintout
 
 <div id="myDiv01">...</div><br>
 <textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
+
+
+
+
+
+
 
 
