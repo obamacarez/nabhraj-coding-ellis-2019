@@ -23,8 +23,9 @@ function myHitOther(my1,my2){
 <input type=text value=0 id="myText01">
 
 
-<img id="myImg01" style="position:absolute; left:200; top:200; width:100; height:100; " />
-<img id="myImg02" style="position:absolute; left:400; top:200; width:100; height:100; " />
+<img id="myImg01"<img src="https://cdn.mos.cms.futurecdn.net/tMnjLRtEm47ueTPt9Rkyxd-320-80.jpg" style="position:absolute; left:200; top:200; width:100; height:100; " />
+<img id="myImg02"<img src="https://themodernproper.com/assets/imager/assets/img/posts/2019/15781/six-minute-egg-5_ba740feb132926901f5efa7bc2de7ad0.jpg" style="position:absolute; left:400; top:200; width:100; height:100; " />
+
 
 
 <input type=button value="go Right"  onclick="{
@@ -33,13 +34,13 @@ function myHitOther(my1,my2){
    if ( myHitOther('myImg01','myImg02') ){
       // alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-        document.getElementById('myText01').value = 1 +
- document.getElementById('myText01).value
+        document.getElementById('myText01').value = 1 + parseInt(document.getElementById('myText01').value)
+ document.getElementById('myText01').value
    mySound1.play()
    }
 }"><br>
 
-<script> let mySound1 = new Audio('Yeh.m4a') </script>
+<script> let mySound1 = new Audio('412068__inspectorj__chewing-carrot-a.wav') </script>
 
 <input type=button value=sound2 onclick="{
     mySound1.play()
@@ -51,4 +52,9 @@ function myHitOther(my1,my2){
 }"onclick="{
    location = 'https://google.ca'
 }"> <br><br>
-    
+
+<style>
+body {
+  background-color: beigw;
+}
+</style>
