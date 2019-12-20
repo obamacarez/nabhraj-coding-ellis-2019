@@ -40,8 +40,8 @@ h1{ color: white;
 </style>
 
 
-<img id="myImg01" <img src="mr orange.gif" style="position:absolute;  width:150px; height:190px; top:300px; left:250px;"   src="myImage01.jpg">
-<img id="myImg02" <img src="New Piskel (4).gif" style="position:absolute;  width:150px; height:180px; top:300px; left:350px;"   src="myImage02.jpg">
+<img id="myImg01" <img src="mr orange.gif" style="position:absolute;  width:150px; height:190px; top:400px; left:50px;"   src="myImage01.jpg">
+<img id="myImg02" <img src="New Piskel (4).gif" style="position:absolute;  width:150px; height:180px; top:400px; left:350px;"   src="myImage02.jpg">
 
 <input type=button value="Auto background Left"  onclick="{
 clearInterval(myClock)
@@ -61,16 +61,21 @@ myCheckHit()          // checks for all collosions
 }"><br><br>
 
 <body type=button value="Go Right Auto"  color:yellow; "  onload="{
- clearInterval(myInterval)
- myInterval = setInterval(function(){
-         document.getElementById('myImg02').style.left =
-        parseInt(document.getElementById('myImg02').style.left) - 10
-  if ( myHitOther('myImg01','myImg02') ){
-      // alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
-  
-}   
-} ,200)
+  clearInterval(myInterval)
+  myInterval = setInterval(function(){
+      document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) - 10
+      myIsOnScreen()
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10
+      if ( myHitOther('myImg01','myImg02') ){
+          // alert('you lose')
+           document.getElementById('myImg01').style.left = '20px'
+      }   
+  } ,200)
+
+
+
+
+
 }">
 
 
@@ -142,20 +147,4 @@ myIsOnScreen()
 
 }">
 
-<body type=button value="Go down Auto"  color:yellow; "  onload="{
-
- clearInterval(myInterval)
- myInterval = setInterval(function(){
-
- document.getElementById('myImg01').style.top =
-parseInt(document.getElementById('myImg01').style.top) + 10
-myIsOnScreen()
-
-if ( myHitOther('myImg01','myImg02') ){
-      // alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
-  
-
-}   } ,200)
-}">
 
