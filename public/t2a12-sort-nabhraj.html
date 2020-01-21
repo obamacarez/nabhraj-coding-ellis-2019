@@ -1,34 +1,67 @@
-<h1 align=center>t2a12 Sort by Nabhraj</h1>
-
-<script>
-let myMax = 3               // 52 when working
-let myCard = new Array(myMax)  
-
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<h1 align=center> t2a12-Sort by Sagar</h1>
+<script >
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+let myArray = []
+myArray[0] = []
+let myTemp = 0
+let x = 0
+function myFunction(){
+    for(let myLoop=0;myLoop<=53;myLoop++){
+        myArray[0][myLoop] = getRndInteger(1, 52)
+        myTemp+=myArray[0][myLoop] +', '
+    }
+    return myTemp
+}
+function mySort(){
+    for (let myLoop1=0;myLoop1<=52;myLoop1++){
+        for(let myLoop2=0;myLoop2<=52;myLoop2++){
+            for(let myLoop=0;myLoop<=52;myLoop++){
+                if(myArray[0][myLoop] >= myArray[0][myLoop+1]){
+                    x= myArray[0][myLoop+1] 
+                    myArray[0][myLoop+1]= myArray[0][myLoop] 
+                    myArray[0][myLoop] = x  
+                }   
+            }
+        }
+        myTemp+=myArray[0][myLoop1] +', '
+    }
+    return myTemp
+}
 
 </script>
-
-<input type=button value="Set Random" onclick="{
-  for ( let myLoop = 0;  myLoop < myMax; myLoop++){
-myCards[myLoop] = Math.floor(Math.random()*10)
-
-
-
-}
+<h1 style="color:red; ">Sort</h1>
+<input type="button" value="Set Random" onclick="{
+myTemp = ' '
+document.getElementById('myDiv01').innerText = myFunction()
 }">
-
-<input type=button value="show" onclick="{
-let myTemp = ' '
-  for ( let myLoop = 0;  myLoop < myMax; myLoop++){
-myTemp += myLoop + ' = '+ myCards[myLoop] + '<br>'
-}
-document.getElementById('myDiv01').innerHTML = myTemp
+<input type="button" value="Sort" onclick="{
+myTemp=''
+document.getElementById('myDiv01').innerText = mySort()
 }">
-
-<input type=button value="Sort" onclick="{
-let myTemp = 0
-  for ( let myLoop = 0;  myLoop < myMax; myLoop++){
-myCards[myLoop] = 0 // you do this stuff
-}
-}">
-
-<dir id="myDiv01"></div>
+<div id="myDiv01">...</div>
